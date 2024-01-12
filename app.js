@@ -7,6 +7,7 @@ const ssr = require('./middleware/ssr');
 
 // подключаем все роуты
 const indexRouter = require('./routes/index.routes');
+const getUser = require('./middleware/getUser');
 
 const app = express();
 const PORT = 3021;
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 // мидлварка для формирования html из реакт / подключить!!
 app.use(ssr);
+app.use(getUser);
 // миделварка для всех роутов / подключить!!
 app.use('/', indexRouter);
 

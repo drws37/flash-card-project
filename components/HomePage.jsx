@@ -1,12 +1,12 @@
 const React = require('react');
+const NavBar = require('./NavBar');
 const Layout = require('./Layout');
-const Header = require('./Header');
 const ThemeList = require('./ThemeList');
 
-function HomePage({ title, themeList }) {
+function HomePage({ title, themeList, user }) {
   return (
-    <Layout title={title}>
-      <Header />
+    <Layout title={title} user={user}>
+      <NavBar user={user} />
       <ThemeList themeList={themeList} />
     </Layout>
   );
