@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 
 // подключаем для формирования html из реакт
-// const ssr = require('./middleware/ssr');
+const ssr = require('./middleware/ssr');
 
 // подключаем все роуты
 const indexRouter = require('./routes/index.routes');
@@ -15,9 +15,9 @@ const PORT = 3021;
 app.use(express.urlencoded({ extended: 'true' }));
 app.use(express.json());
 // мидлварка для public
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 // мидлварка для формирования html из реакт / подключить!!
-// app.use(ssr);
+app.use(ssr);
 // миделварка для всех роутов / подключить!!
 app.use('/', indexRouter);
 
