@@ -15,7 +15,7 @@ function Layout({ title, children, user }) {
         {/* стили для HomePage: */}
         <link rel='stylesheet' href='/style/style.css' />
         <script defer src='/scripts/addUser.js' />
-        <script defer src='/scripts/nextQuestion.js' />
+        <script defer src='/scripts/next.js' />
       </head>
       <body> {children}</body>
     </html>
