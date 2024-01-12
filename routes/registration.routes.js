@@ -15,6 +15,9 @@ router.post('/', async (req, res) => {
     const { name } = req.body;
     console.log(name);
     const user = await User.create({ name, scores: 0 });
+    res.json({
+      message: 'success',
+    });
   } catch ({ message }) {
     console.log({ message });
   }
