@@ -1,31 +1,31 @@
-const React = require('react')
-const Layout = require('./Layout')
+const React = require('react');
+const Layout = require('./Layout');
 
-function RegistrationPage({title, user}) {
-  return(
+function RegistrationPage({ title, user }) {
+  return (
     <Layout title={title} user={user}>
-      <h1>Registration Page</h1>
-      <div className="container">
-      <form id="add-user">
-        <div className="mb-3">
-          <label htmlFor="exampleInputEmail1" className="form-label">
-            Name
-          </label>
-          <input
-            name="name"
-            type="text"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-        </div> 
-        <button className="btn btn-primary" type="submit">
+      <div className="containerForm">
+        <h1 className="titleReg">Registration Page</h1>
+        <form id="add-user">
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">
+              Name
+            </label>
+            <input
+              name="name"
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <button className="btn btn-primary" type="submit">
             Submit
-        </button>
-      </form>
-    </div>
+          </button>
+        </form>
+      </div>
     </Layout>
-  )
+  );
 }
 
-module.exports = RegistrationPage
+module.exports = RegistrationPage;
