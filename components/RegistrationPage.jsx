@@ -18,9 +18,9 @@ function RegistrationPage({title}) {
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
           />
-        </div>  
-        <button type="submit" className="btn btn-primary">
-          Submit
+        </div> 
+        <button className="btn btn-primary" type="submit">
+            Submit
         </button>
       </form>
     </div>
