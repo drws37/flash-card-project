@@ -1,9 +1,9 @@
 const React = require('react')
 const Layout = require('./Layout')
 
-function RegistrationPage({title}) {
+function RegistrationPage({title, user}) {
   return(
-    <Layout title={title}>
+    <Layout title={title} user={user}>
       <h1>Registration Page</h1>
       <div className="container">
       <form id="add-user">

@@ -14,10 +14,16 @@ router.post('/', async (req, res) => {
   try {
     const { name } = req.body;
     console.log(name);
-    const user = await User.create({ name, scores: 0 });
-    res.json({
-      message: 'success',
-    });
+    if (name !== '') {
+      const user = await User.create({ name, scores: 0 });
+      res.json({
+        message: 'success',
+      });
+    } else {
+      res.json({
+        message: 'Введите имя пользователя',
+      });
+    }
   } catch ({ message }) {
     console.log({ message });
   }
