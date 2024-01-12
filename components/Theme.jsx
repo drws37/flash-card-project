@@ -7,7 +7,7 @@ function Theme({ theme }) {
         <img src={theme.theme_image} alt="img" />
       </div>
       <p>{theme.title}</p>
-      <a href={`/home/${theme.id}`} className="btnStartGame">
+      <a href={`/question/1/${theme.id}`} className="btnStartGame">
         Start game
       </a>
     </div>

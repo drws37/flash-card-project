@@ -2,24 +2,22 @@ const React = require('react');
 
 function Layout({ title, children, user }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <head>
         <title>{title}</title>
         {/* стили Bootstrap: */}
         <link
-          href="/styles/bootstrap.css"
-          rel="stylesheet"
-          crossOrigin="anonymous"
-        ></link>
+          href='/styles/bootstrap.css'
+          rel='stylesheet'
+          crossOrigin='anonymous'
+        />
 
         {/* стили для HomePage: */}
-        <link rel="stylesheet" href="/style/style.css" />
-        <script defer src="/scripts/addUser.js" />
+        <link rel='stylesheet' href='/style/style.css' />
+        <script defer src='/scripts/addUser.js' />
+        <script defer src='/scripts/nextQuestion.js' />
       </head>
-      <body>
-        {' '}
-        {children}
-      </body>
+      <body> {children}</body>
     </html>
   );
 }
