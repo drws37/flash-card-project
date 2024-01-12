@@ -5,7 +5,7 @@ function Question({ question, user, index }) {
   return (
     <Layout user={user}>
       <div>
-        <img src={question.img} alt='' />
+        <img src={question.question_image} alt='' />
         <div>
           <h2>{question.question}</h2>
         </div>
